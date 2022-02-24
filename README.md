@@ -8,7 +8,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ```
 
 ## Instalando o node.js e Java JDK
-No PowerShell executaro o seguinte comando:
+No PowerShell executar o comando:
 ```
 choco install -y nodejs-lts
 ```
@@ -17,12 +17,4 @@ choco install -y nodejs-lts
 Execute o comando:
 ```
 npm install -g expo-cli
-```
-
-### Inicie a aplicação teste
-```
-expo init AwesomeProject
-
-cd AwesomeProject
-npm start
 ```
