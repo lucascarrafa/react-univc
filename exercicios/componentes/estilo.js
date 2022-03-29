@@ -6,5 +6,5 @@ export default StyleSheet.create({
     },
     fontPequena:{
         fontSize: 15,
-    }
+    },
 })
