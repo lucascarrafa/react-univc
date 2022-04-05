@@ -5,8 +5,8 @@ import Font from './estilo'
 export default (props) => {
     const [valor, setValor] = useState(props.inicial) 
 
-    const somar = () => setValor(valor+1)
-    const diminuir = () => setValor(valor-1)
+    const somar = () => setValor(valor+props.pulo_soma)
+    const diminuir = () => setValor(valor-props.pulo_diminuir)
 
     return(
         <>
