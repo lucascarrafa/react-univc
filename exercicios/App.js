@@ -7,9 +7,12 @@ import Contator from './componentes/Contator'
 import Pai from './componentes/comunicacao/Pai'
 import ContadorV2 from './componentes/contador/ContadorV2'
 import Produtos from './componentes/produtos/Produtos'
+import EntradaDados from './componentes/EntradaDados'
+
 export default () => (
     <View style={tela.App}>
         <Produtos></Produtos>
+        <EntradaDados></EntradaDados>
     </View>
 )
 
