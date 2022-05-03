@@ -11,7 +11,6 @@ import EntradaDados from './componentes/EntradaDados'
 
 export default () => (
     <View style={tela.App}>
-        <Produtos></Produtos>
         <EntradaDados></EntradaDados>
     </View>
 )
