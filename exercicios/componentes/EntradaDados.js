@@ -1,9 +1,7 @@
 import React, {useState} from 'react'
 import { View, TextInput, Text } from 'react-native'
 import Estilo from './estilo'
-import VerificaImparPar from './ParImpar'
-import produtos from './produtos/listaprodutos'
-import axios from "axios"
+import axios from 'axios'
 
 
 export default () => {
@@ -26,13 +24,13 @@ export default () => {
         axios
             .get("http://192.168.10.102:5000/lista")
             .then((response) => {
-                setLista(response.data.map(aux=>({id: aux.id,nome: aux.nome, preco: aux.preco})))
+                setLista(response.data.map(aux=>({id: aux.id, nome: aux.nome, preco: aux.preco})))
             });
     };
 
     return(
         <View>
-            <Text style={Estilo.fontPequena}>Desconto:</Text>
+            <Text style={Estilo.fontGrande}>Desconto:</Text>
             <TextInput 
             style={{ height: 25, borderColor: '#80dead', borderWidth: 2 }}
             placeholder='Digite o desconto' 
