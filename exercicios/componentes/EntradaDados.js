@@ -5,7 +5,7 @@ import axios from 'axios'
 
 
 export default () => {
-    const [valor, setValor] = useState('')
+    const [valor, setValor] = useState('0')
     const [lista, setLista] = useState([])
 
     function obterListaDesconto(){
@@ -13,7 +13,7 @@ export default () => {
         return lista.map(p =>{
             return(
                 <Text style={Estilo.fontPequena} key={p.id}>
-                    {p.id}) {p.nome} custa R$ {(p.preco-p.preco*(valor/100)).toFixed(2)} com {valor}% desconto
+                    {p.id}) {p.nome} custa R$ {(p.preco-p.preco*(valor/100)).toFixed(2)} com {valor}% de desconto
                 </Text>
             )
         }
@@ -22,7 +22,7 @@ export default () => {
 
     const getAdvice = () => {
         axios
-            .get("http://192.168.10.102:5000/lista")
+            .get("http://192.168.10.102:8080/lista")
             .then((response) => {
                 setLista(response.data.map(aux=>({id: aux.id, nome: aux.nome, preco: aux.preco})))
             });
