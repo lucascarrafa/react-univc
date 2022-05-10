@@ -15,12 +15,11 @@ def verifica():
 @app.route('/lista',methods=['GET'])
 @cross_origin()
 def status():
-    server = '192.168.10.103' 
-    database = 'aula' 
-    username = 'carrafa' 
-    password = 'admin' 
-    #cnxn = pyodbc.connect('DRIVER={PostgreSQL Unicode};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
-    cnxn = psycopg2.connect(host='192.168.10.103', database='aula', user='carrafa', password='admin')
+    server = '10.200.111.124' 
+    database = 'sempretem' 
+    username = 'mobile' 
+    password = 'ADS@univc2022' 
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
     cursor = cnxn.cursor()
     cursor.execute("SELECT * FROM produtos")
 
