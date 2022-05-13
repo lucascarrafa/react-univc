@@ -23,7 +23,7 @@ Na pasta onde está o arquivo app.py excutar o comando no cmd
 python app.py
 ```
 
-# Criar o banco
+# Criar a tabela
 ```
 CREATE TABLE produtos (id_venda int, varchar(50), preco decimal(6, 2));
 ```
