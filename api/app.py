@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 import pyodbc
+import mysql.connector
 import psycopg2
 
 app = Flask(__name__)
@@ -15,11 +16,12 @@ def verifica():
 @app.route('/lista',methods=['GET'])
 @cross_origin()
 def status():
-    server = '10.200.111.124' 
-    database = 'sempretem' 
-    username = 'mobile' 
-    password = 'ADS@univc2022' 
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+    server = '127.0.0.1' 
+    database = 'supermercado' 
+    username = 'mobile' #usuario criado
+    password = 'ADS@univc2022' #senha criada
+    cnxn = mysql.connector.connect(user=username, password=password, host=server, database=database)
+    #cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
     cursor = cnxn.cursor()
     cursor.execute("SELECT * FROM produtos")
 

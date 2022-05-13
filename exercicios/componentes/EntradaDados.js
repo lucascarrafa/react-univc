@@ -22,7 +22,7 @@ export default () => {
 
     const getAdvice = () => {
         axios
-            .get("http://192.168.10.102:8080/lista")
+            .get("http://10.200.108.218:8080/lista")
             .then((response) => {
                 setLista(response.data.map(aux=>({id: aux.id, nome: aux.nome, preco: aux.preco})))
             });
