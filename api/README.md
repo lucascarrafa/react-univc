@@ -22,3 +22,13 @@ Na pasta onde está o arquivo app.py excutar o comando no cmd
 ```
 python app.py
 ```
+
+# Criar o banco
+```
+CREATE TABLE produtos (id_venda int, varchar(50), preco decimal(6, 2));
+```
+
+## Inserir os dados
+```
+INSERT INTO produtos (id_venda,nome,preco) VALUES (1,'Picanha',45.90);
+```
