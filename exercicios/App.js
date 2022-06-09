@@ -8,10 +8,12 @@ import Pai from './componentes/comunicacao/Pai'
 import ContadorV2 from './componentes/contador/ContadorV2'
 import Produtos from './componentes/produtos/Produtos'
 import EntradaDados from './componentes/EntradaDados'
+import Quadrado from './componentes/layout/Quadrado'
+import FlexboxV2 from './componentes/layout/FlexboxV2'
 
 export default () => (
     <View style={tela.App}>
-        <EntradaDados></EntradaDados>
+        <FlexboxV2></FlexboxV2>
     </View>
 )
 
