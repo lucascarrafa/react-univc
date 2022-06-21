@@ -10,10 +10,11 @@ import Produtos from './componentes/produtos/Produtos'
 import EntradaDados from './componentes/EntradaDados'
 import Quadrado from './componentes/layout/Quadrado'
 import FlexboxV2 from './componentes/layout/FlexboxV2'
+import FlexboxV4 from './componentes/layout/FlexboxV4'
 
 export default () => (
     <View style={tela.App}>
-        <FlexboxV2></FlexboxV2>
+        <FlexboxV4></FlexboxV4>
     </View>
 )
 
