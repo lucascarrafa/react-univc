@@ -11,10 +11,11 @@ import EntradaDados from './componentes/EntradaDados'
 import Quadrado from './componentes/layout/Quadrado'
 import FlexboxV2 from './componentes/layout/FlexboxV2'
 import FlexboxV4 from './componentes/layout/FlexboxV4'
+import Mega from './componentes/mega/Mega'
 
 export default () => (
     <View style={tela.App}>
-        <FlexboxV4></FlexboxV4>
+        <Mega qtdeNumeros={12}></Mega>
     </View>
 )
 
